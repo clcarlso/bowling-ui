@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +8,24 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'bowling-ui';
 
-  currentRoll = "";
+  //currentRoll = "";
+  currentRoll: number = 0;
+  rolls:string[] = [];
+
+  scoreBoardData = {
+    frameNumber : "",
+
+   };
 
   onRoll(pins:string){
-    this.currentRoll = pins;
+    this.rolls = [...this.rolls, pins];
+    console.log(this.rolls);
+  }
+
+  addToRolls(roll:number){
+
+  }
+  ngOnChanges(){
+
   }
 }

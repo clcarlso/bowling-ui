@@ -8,7 +8,10 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ScoreboardFrameCardComponent implements OnInit {
 
 
-@Input() firstValue: string = "0";
+@Input() frameNumber: string = "";
+@Input() firstNum:string = "";
+@Input() secondNum:string = "";
+/*@Input() frameTotal: string = "0";*/
 
   constructor() { }
 

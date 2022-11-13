@@ -1,10 +1,9 @@
 
 <div class="content" role="main">
-  <app-scoreboard-frame-card [firstValue]="currentRoll"></app-scoreboard-frame-card>
   <p>Hello World</p>
   <app-roll-button (pins)="onRoll($event)"></app-roll-button>
-  
-  <app-scoreboard></app-scoreboard>
+  <p>pins {{rolls}}</p>
+  <app-scoreboard [rolls] ="rolls" ></app-scoreboard>
   <p> You rolled a {{currentRoll}}</p>
 </div>
 

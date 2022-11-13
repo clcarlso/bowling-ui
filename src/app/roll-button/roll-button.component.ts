@@ -10,7 +10,7 @@ import { DataService } from '../data.service';
 })
 export class RollButtonComponent implements OnInit {
 
-  private products:any[] = [];
+ 
 
   constructor(private dataService: DataService, private rollButtonService: RollButtonService) { }
 

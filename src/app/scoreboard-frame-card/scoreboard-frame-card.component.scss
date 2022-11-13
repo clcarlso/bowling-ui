@@ -10,14 +10,17 @@
     flex-direction: row;
     border: 1px solid black;
     justify-content: center;
+    height: 24px;
 }
 .scoreboard-card-frame-firstroll-container{
     border: 1px solid black;
     flex-grow: 1;
+    min-width: 15px;
 }
 .scoreboard-card-frame-secondroll-container{
     border: 1px solid black;
     flex-grow: 1;
+    min-width: 15px;
 }
 
 .scoreboard-card-frame-total-container{

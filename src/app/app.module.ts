@@ -24,6 +24,7 @@ import { ScoreboardFrameCardComponent } from './scoreboard-frame-card/scoreboard
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ScoreboardFrameCardComponent]
 })
 export class AppModule { }
