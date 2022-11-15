@@ -12,6 +12,8 @@ export class AppComponent {
   currentRoll: number = 0;
   rolls:string[] = [];
 
+  scores:Number[] = [];
+
   scoreBoardData = {
     frameNumber : "",
 
@@ -22,9 +24,11 @@ export class AppComponent {
     console.log(this.rolls);
   }
 
-  addToRolls(roll:number){
-
+  gatherScore(scores: Number[]){
+    this.scores = scores;
+    console.log(this.scores);
   }
+  
   ngOnChanges(){
 
   }

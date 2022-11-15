@@ -2,6 +2,7 @@
 <div class="content" role="main">
   <p>Hello World</p>
   <app-roll-button (pins)="onRoll($event)"></app-roll-button>
+  <app-score-button (scores)="gatherScore($event)"></app-score-button>
   <p>pins {{rolls}}</p>
   <app-scoreboard [rolls] ="rolls" ></app-scoreboard>
   <p> You rolled a {{currentRoll}}</p>

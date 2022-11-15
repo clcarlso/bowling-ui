@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ScoreboardComponent } from './scoreboard/scoreboard.component';
 import { RollButtonComponent } from './roll-button/roll-button.component';
+import { ScoreButtonComponent } from './score-button/score-button.component';
 import { ScoreboardFrameCardComponent } from './scoreboard-frame-card/scoreboard-frame-card.component';
 
 
@@ -16,6 +17,7 @@ import { ScoreboardFrameCardComponent } from './scoreboard-frame-card/scoreboard
     
     ScoreboardComponent,
     RollButtonComponent,
+    ScoreButtonComponent,
     ScoreboardFrameCardComponent
   ],
   imports: [
