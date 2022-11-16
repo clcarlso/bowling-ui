@@ -13,6 +13,7 @@ import { SimpleChanges } from '@angular/core';
 export class ScoreboardComponent implements OnInit {
   @ViewChild('scoreContain', { read: ViewContainerRef}) scoreContain!: ViewContainerRef;
   @Input() rolls:string[] = [];
+  @Input() scores:Number[] = [];
 
   private scoreboardSize = 9;
   constructor() {
@@ -25,9 +26,14 @@ export class ScoreboardComponent implements OnInit {
         const componentRef = this.scoreContain.createComponent(ScoreboardFrameCardComponent);
         componentRef.instance.frameNumber = (i+1).toString();
         let frameRef = i*2;
-        console.log(this.rolls);
+       
         componentRef.instance.firstNum = this.rolls[frameRef];
         componentRef.instance.secondNum = this.rolls[frameRef+1];
+        if(this.scores[i] !== undefined){
+          console.log(i + " :: " + this.scores[i].toString());
+          componentRef.instance.frameScore = this.scores[i].toString();
+        }
+        
       }
   }
   ngOnInit(): void {
