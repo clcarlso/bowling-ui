@@ -9,6 +9,7 @@ import { ScoreboardComponent } from './scoreboard/scoreboard.component';
 import { RollButtonComponent } from './roll-button/roll-button.component';
 import { ScoreButtonComponent } from './score-button/score-button.component';
 import { ScoreboardFrameCardComponent } from './scoreboard-frame-card/scoreboard-frame-card.component';
+import { ResetButtonComponent } from './reset-button/reset-button.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ScoreboardFrameCardComponent } from './scoreboard-frame-card/scoreboard
     ScoreboardComponent,
     RollButtonComponent,
     ScoreButtonComponent,
-    ScoreboardFrameCardComponent
+    ScoreboardFrameCardComponent,
+    ResetButtonComponent
   ],
   imports: [
     BrowserModule,

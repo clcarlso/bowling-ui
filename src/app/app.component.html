@@ -3,6 +3,7 @@
   <p>Hello World</p>
   <app-roll-button (pins)="onRoll($event)"></app-roll-button>
   <app-score-button (scores)="gatherScore($event)"></app-score-button>
+  <app-reset-button (resetReturn)="resetGame($event)"></app-reset-button>
   <p>pins {{rolls}}</p>
   <app-scoreboard [rolls] ="rolls" [scores] = "scores"></app-scoreboard>
   <p> You rolled a {{currentRoll}}</p>

@@ -14,10 +14,6 @@ export class AppComponent {
 
   scores:Number[] = [];
 
-  scoreBoardData = {
-    frameNumber : "",
-
-   };
 
   onRoll(pins:string){
     this.rolls = [...this.rolls, pins];
@@ -27,6 +23,14 @@ export class AppComponent {
   gatherScore(scores: Number[]){
     this.scores = scores;
     console.log(this.scores);
+  }
+
+  resetGame(resetFlag: boolean){
+    console.log(resetFlag);
+    if(resetFlag == true){
+      this.rolls = [];
+      this.scores = []
+    }
   }
   
   ngOnChanges(){

@@ -21,7 +21,9 @@ export class ScoreboardComponent implements OnInit {
   }
 
   loadComponents(): void{
-      this.scoreContain.clear();
+      if (this.scoreContain!== undefined){
+        this.scoreContain.clear();
+      
       for(let i=0;i< this.scoreboardSize;i++){
         const componentRef = this.scoreContain.createComponent(ScoreboardFrameCardComponent);
         componentRef.instance.frameNumber = (i+1).toString();
@@ -35,6 +37,7 @@ export class ScoreboardComponent implements OnInit {
         }
         
       }
+    }
   }
   ngOnInit(): void {
     
