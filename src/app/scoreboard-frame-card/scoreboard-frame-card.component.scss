@@ -2,27 +2,81 @@
 .scoreboard-card-container{
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    //border: 1px solid black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    flex-grow: 1;
 }
+
+
+
+.scoreboard-card-frame-container{
+    display: flex;
+    border: 0px solid red;
+    min-height: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid green;
+}
+.scoreboard-card-frame-value{
+
+}
+
+
 
 .scoreboard-card-frame-pin-container{
     display: flex;
     flex-direction: row;
-    border: 1px solid black;
+    border: 0px solid orange;
     justify-content: center;
-    height: 24px;
-}
-.scoreboard-card-frame-firstroll-container{
-    border: 1px solid black;
-    flex-grow: 1;
-    min-width: 15px;
-}
-.scoreboard-card-frame-secondroll-container{
-    border: 1px solid black;
-    flex-grow: 1;
-    min-width: 15px;
+    align-items: center;
 }
 
+.scoreboard-card-frame-firstroll-container{
+    display: flex;
+    border: 0px solid blue;
+    flex-grow: 1;
+    min-width: 15px;
+    min-height: 30px;
+    padding: 0 5px 0 5px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+   
+}
+.scoreboard-card-frame-firstroll-value{
+}
+
+.scoreboard-card-frame-secondroll-container{
+    display: flex;
+    border: 0px solid green;
+    flex-grow: 1;
+    min-width: 15px;
+    min-height: 30px;
+    padding: 0 5px 0 5px;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid green;
+    border-bottom: 1px solid green;
+    height: 100%;
+}
+.scoreboard-card-frame-secondroll-value{
+
+}
+
+
+
 .scoreboard-card-frame-total-container{
-    border: 1px solid black;
+    display: flex;
+    border: 0px solid purple;
+    
+    min-height: 30px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.scoreboard-card-frame-total-value{
+
 }

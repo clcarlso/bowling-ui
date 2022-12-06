@@ -11,8 +11,17 @@ export class RollButtonService {
 
     constructor(private dataService: DataService, private http: HttpClient) { }
 
-    rollPins(numberOfPins:Number): any{
-        return this.http.get(this.url + '/roll/' + numberOfPins);
+    rollPins(): any{
+        return this.http.get(this.url + '/roll/');
+    }
+    rollMap(): any{
+      return this.http.get(this.url + '/rollMap/');
+    }
+    placePins(numberOfPins:Number): any{
+      return this.http.get(this.url + '/place/' + numberOfPins);
+    }
+    getScore(): any{
+      return this.http.get(this.url + '/score/');
     }
 
 }

@@ -17,27 +17,32 @@ export class RollButtonComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Output() pins = new EventEmitter<string>(); 
+  @Output() pin = new EventEmitter<string>(); 
+  @Output() rollMap = new EventEmitter<Map<Number,Number[]>>();
+  @Output() scores = new EventEmitter<Number[]>();
 
   buttonRoll(){
-    let max = 10;
-    let min = 0;
-    let pinsKnockedOver = Math.floor(Math.random() * (max - min + 1));
-    let pinsDisplayable = pinsKnockedOver.toString();
 
     try{
-      this.rollButtonService.rollPins(pinsKnockedOver).subscribe((data:any)=>{
-        console.log(data);
+      //call service to roll pin
+      this.rollButtonService.rollPins().subscribe((rollPinData:any)=>{
+        this.pin.emit(rollPinData);
+
+        //wait till the roll finishes before calling the roll map service
+        this.rollButtonService.rollMap().subscribe((rollMapData:any)=>{
+          this.rollMap.emit(rollMapData);
+
+          //wait till the roll map service comes back to call the score service
+          this.rollButtonService.getScore().subscribe((data:any)=>{
+            this.scores.emit(data);
+          });
+        });
       });
-    
-
-      console.log(pinsDisplayable);
-      this.pins.emit(pinsDisplayable);
-      
-
     }
-    catch{}
+    catch (error) {
+      console.error(error);
   }
+}
 
 
 }
