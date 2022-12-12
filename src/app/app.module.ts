@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -16,12 +17,12 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
 import { MenuButtonComponent } from './menu-button/menu-button.component';
 import { LeaderboardPageComponent } from './leaderboard-page/leaderboard-page.component';
 import { GameOptionPageComponent } from './game-option-page/game-option-page.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    
     ScoreboardComponent,
     RollButtonComponent,
     ScoreButtonComponent,
@@ -36,8 +37,11 @@ import { GameOptionPageComponent } from './game-option-page/game-option-page.com
   ],
   imports: [
     BrowserModule,
+    
+    HttpClientModule,
+    CommonModule,
+    FormsModule,
     AppRoutingModule,
-    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

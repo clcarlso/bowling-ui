@@ -1,1 +1,42 @@
-<p>game-option-page works!</p>
+
+<div class="game-option-page-container">
+    <p>game-option-page works!</p>
+    <form #form="ngForm" (ngSubmit)="submitButtonPress()" class = "game-option-page-form">
+        <div class = "game-option-page-form-container">
+
+            <div class = "row">
+                <label>Number of pins: </label>
+                <input type="text"  [(ngModel)]="gameOptionsTest.pins" name="pins"/>
+            </div>
+
+            <div class = "row">
+                <label>Number of frame(s): </label>
+                <input type="text" [(ngModel)]="gameOptionsTest.frames" name="frames">
+            </div>
+
+            <div class = "row">
+                <label>Rolls per frame(s): </label>
+                <input type="text" [(ngModel)]="gameOptionsTest.rollsPerFrame" name="rollsPerFrame">
+            </div>
+
+            <div class = "row">
+                <label>Number of end frame(s): </label>
+                <input type="text" [(ngModel)]="gameOptionsTest.endFrames" name="endFrames">
+            </div>
+
+            <div class = "row">
+                <label>Rolls per end frame(s): </label>
+                <input type="text" [(ngModel)]="gameOptionsTest.rollsPerEndFrame" name="rollsPerEndFrame">
+            </div>
+
+            <div class = "row">
+                <label>Roll mode: </label>
+                <input type="text" [(ngModel)]="gameOptionsTest.mode" name="mode">
+            </div>
+
+            <div class = "submit-button-container">
+                <button type="submit">Play</button>
+            </div>
+        </div>
+    </form>
+</div>
