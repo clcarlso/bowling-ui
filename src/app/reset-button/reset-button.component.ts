@@ -22,7 +22,6 @@ export class ResetButtonComponent implements OnInit {
     
     try{
       this.resetButtonService.resetScore().subscribe((data:any)=>{
-        console.log(data);
         this.resetReturn.emit(data);
       });
       
