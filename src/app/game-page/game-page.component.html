@@ -1,8 +1,7 @@
 <div class="content" role="main">
-    <p>Hello World</p>
-    <app-roll-button (pin)="onRoll($event)" (rollMap)="updateRollMap($event)" (scores)="gatherScore($event)"></app-roll-button>
-    <app-reset-button (resetReturn)="resetGame($event)"></app-reset-button>
-    <p>pins {{rolls}}</p>
-    <app-scoreboard [rollMap] ="rollMap" [scores] = "scores"></app-scoreboard>
-    <p> You rolled a {{currentRoll}}</p>
+    
+    <app-game-options *ngIf="gameOptionVisibility" (gameOptionResponseData)="gameOptionSubmission($event)"></app-game-options>
+    
+    <app-bowling-game *ngIf="bowlingGameVisibility" [bowlingGameDataInput]="gamePageBowlingGameData"></app-bowling-game>
+
 </div>

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GameOptionPageComponent } from './game-option-page.component';
+import { GameOptionPageComponent } from './game-options.component';
 
 describe('GameOptionPageComponent', () => {
   let component: GameOptionPageComponent;

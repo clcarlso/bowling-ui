@@ -1,3 +1,4 @@
+import { BowlingGameComponent } from './bowling-game/bowling-game.component';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,7 +17,7 @@ import { GamePageComponent } from './game-page/game-page.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { MenuButtonComponent } from './menu-button/menu-button.component';
 import { LeaderboardPageComponent } from './leaderboard-page/leaderboard-page.component';
-import { GameOptionPageComponent } from './game-option-page/game-option-page.component';
+import { GameOptionsPageComponent } from './game-options/game-options.component';
 import { CommonModule } from '@angular/common';
 
 
@@ -33,7 +34,8 @@ import { CommonModule } from '@angular/common';
     NotFoundPageComponent,
     MenuButtonComponent,
     LeaderboardPageComponent,
-    GameOptionPageComponent
+    GameOptionsPageComponent,
+    BowlingGameComponent
   ],
   imports: [
     BrowserModule,

@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GamePageComponent } from './game-page/game-page.component';
 import { MainMenuPageComponent } from './main-menu-page/main-menu-page.component';
-import { GameOptionPageComponent } from './game-option-page/game-option-page.component';
+import { GameOptionsPageComponent } from './game-options/game-options.component';
 
 
 
@@ -19,11 +19,6 @@ const routes: Routes = [
     path: 'main-menu-page', 
     title: 'Bowling-Game Menu - Page',
     component: MainMenuPageComponent
-  },
-  { 
-    path: 'game-options-page', 
-    title: 'Bowling Game Options - Page',
-    component: GameOptionPageComponent
   },
   { 
     path: 'leaderboard-page', 

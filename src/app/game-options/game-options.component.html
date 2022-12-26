@@ -1,0 +1,41 @@
+
+<div class="game-options-container">
+    <form #form="ngForm" (ngSubmit)="submitButtonPress()" class = "game-options-form">
+        <div class = "game-options-form-container">
+
+            <div class = "row">
+                <label>Number of pins: </label>
+                <input type="text"  [(ngModel)]="gameOptionsData.pins" name="pins"/>
+            </div>
+
+            <div class = "row">
+                <label>Number of frame(s): </label>
+                <input type="text" [(ngModel)]="gameOptionsData.frames" name="frames">
+            </div>
+
+            <div class = "row">
+                <label>Rolls per frame(s): </label>
+                <input type="text" [(ngModel)]="gameOptionsData.rollsPerFrame" name="rollsPerFrame">
+            </div>
+
+            <div class = "row">
+                <label>Number of end frame(s): </label>
+                <input type="text" [(ngModel)]="gameOptionsData.endFrames" name="endFrames">
+            </div>
+
+            <div class = "row">
+                <label>Rolls per end frame(s): </label>
+                <input type="text" [(ngModel)]="gameOptionsData.rollsPerEndFrame" name="rollsPerEndFrame">
+            </div>
+
+            <div class = "row">
+                <label>Roll mode: </label>
+                <input type="text" [(ngModel)]="gameOptionsData.mode" name="mode">
+            </div>
+
+            <div class = "submit-button-container">
+                <button type="submit">Play</button>
+            </div>
+        </div>
+    </form>
+</div>

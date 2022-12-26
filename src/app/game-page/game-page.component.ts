@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { GameOptionsPageComponent } from './../game-options/game-options.component';
+import { Component, OnInit, SimpleChanges, ViewChild, ViewContainerRef } from '@angular/core';
+import { BowlingGameComponent } from '../bowling-game/bowling-game.component';
+import { ScoreboardFrameCardComponent } from '../scoreboard-frame-card/scoreboard-frame-card.component';
 
 @Component({
   selector: 'app-game-page',
@@ -6,35 +9,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game-page.component.scss']
 })
 export class GamePageComponent implements OnInit {
-
+  @ViewChild('gameContainer', { read: ViewContainerRef}) gameContainer!: ViewContainerRef;
+  gameUUID: string = "";
+  gamePageBowlingGameData: any;
   constructor() { }
   
-  currentRoll: string = "";
-  rolls:string[] = [];
-  rollMap: Map<String, any> = new Map();
-  scores:Number[] = [];
+  gameOptionVisibility = true;
+  bowlingGameVisibility = false;
 
-
-  onRoll(newPin:string){
-    this.currentRoll = newPin;
+  gameOptionSubmission(gameOptionResponseData: any){
+    this.gamePageBowlingGameData = gameOptionResponseData;
+    this.gameOptionVisibility = false;
+    this.bowlingGameVisibility = true;
+  }
+ 
+  loadComponents(): void{
+    
   }
 
-  updateRollMap(newRollMap:Map<Number,Number[]>){
-    this.rollMap = new Map(Object.entries(newRollMap));
-  }
-
-  gatherScore(newScores: Number[]){
-    this.scores = newScores;
-  }
-
-  resetGame(resetFlag: boolean){
-    this.rollMap = Object.assign(new Map(), {});
-    if(resetFlag == true){
-      this.rolls = [];
-      this.scores = []
-    }
-  }
   ngOnInit(): void {
   }
 
+  ngOnChanges(changes: SimpleChanges){
+  }
+ 
+  
 }
