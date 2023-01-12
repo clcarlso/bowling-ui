@@ -1,7 +1,7 @@
 <div class="content" role="main">
     
-    <app-game-options *ngIf="gameOptionVisibility" (gameOptionResponseData)="gameOptionSubmission($event)"></app-game-options>
+    <app-game-options (gameOptionResponseData)="gameOptionSubmission($event)"></app-game-options>
     
-    <app-bowling-game *ngIf="bowlingGameVisibility" [bowlingGameDataInput]="gamePageBowlingGameData"></app-bowling-game>
+    <!--<app-bowling-game  [bowlingGameDataInput]="gamePageBowlingGameData"></app-bowling-game>-->
 
 </div>

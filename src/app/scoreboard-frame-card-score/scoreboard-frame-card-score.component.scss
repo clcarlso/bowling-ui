@@ -1,0 +1,11 @@
+.scoreboard-frame-card-score-container{
+    display: flex;
+    flex-direction: column;
+    //border: 1px solid black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    flex-grow: 1;
+    min-width: 10px;
+    min-height: 10px;
+}

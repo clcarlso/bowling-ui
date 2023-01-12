@@ -1,3 +1,4 @@
+import { BowlingGameComponent } from './bowling-game/bowling-game.component';
 import { LeaderboardPageComponent } from './leaderboard-page/leaderboard-page.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { NgModule } from '@angular/core';
@@ -14,6 +15,11 @@ const routes: Routes = [
     path: 'game-page', 
     title: 'Bowling-Game Game - Page',
     component: GamePageComponent
+  },
+  {
+    path: 'bowling-game', 
+    title: 'Bowling-Game BowlingGame',
+    component: BowlingGameComponent
   },
   {
     path: 'main-menu-page', 

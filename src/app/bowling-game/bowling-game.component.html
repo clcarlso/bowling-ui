@@ -1,8 +1,14 @@
 <div class="content" role="main">
    
-    <app-roll-button (pin)="onRoll($event)" (rollMap)="updateRollMap($event)" (scores)="gatherScore($event)"></app-roll-button>
+    <!--<app-roll-button (pin)="onRoll($event)" (rollMap)="updateRollMap($event)" (scores)="gatherScore($event)"></app-roll-button>
     <app-reset-button (resetReturn)="resetGame($event)"></app-reset-button>
-    <p>pins {{rolls}}</p>
-    <app-scoreboard [rollMap] ="rollMap" [scores] = "scores"></app-scoreboard>
-    <p> You rolled a {{bowlingGameDataModel.currentRoll}}</p> 
+    <p>pins {{this.bowlingGameDataModel.rolls}}</p> 
+    
+    <p> You rolled a {{bowlingGameDataModel.currentRoll}}</p> -->
+
+        
+
+    <app-scoreboard [bowlingGameDataModelParentInput]="bowlingGameDataModel" [bowlingGameOptionsParentInput]="bowlingGameOptionsDataModel"></app-scoreboard>
+
+
 </div>

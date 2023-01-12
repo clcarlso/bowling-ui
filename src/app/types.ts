@@ -4,7 +4,7 @@ export class BowlingGameDataModel {
     this.rolls = [];
     this.rollMap = new Map<String, any>;
     this.scores = [];
-    this.currentRoll = ""
+    this.currentRoll = "";
   }
   uuid: string;
   rolls: string[];

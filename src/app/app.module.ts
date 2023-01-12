@@ -19,6 +19,7 @@ import { MenuButtonComponent } from './menu-button/menu-button.component';
 import { LeaderboardPageComponent } from './leaderboard-page/leaderboard-page.component';
 import { GameOptionsPageComponent } from './game-options/game-options.component';
 import { CommonModule } from '@angular/common';
+import { ScoreboardFrameCardScoreComponent } from './scoreboard-frame-card-score/scoreboard-frame-card-score.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { CommonModule } from '@angular/common';
     MenuButtonComponent,
     LeaderboardPageComponent,
     GameOptionsPageComponent,
-    BowlingGameComponent
+    BowlingGameComponent,
+    ScoreboardFrameCardScoreComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +49,9 @@ import { CommonModule } from '@angular/common';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [ScoreboardFrameCardComponent]
+  entryComponents: [
+    ScoreboardFrameCardComponent,
+    ScoreboardFrameCardScoreComponent
+  ]
 })
 export class AppModule { }

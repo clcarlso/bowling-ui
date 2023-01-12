@@ -43,7 +43,7 @@ export class GameOptionsPageComponent implements OnInit {
     let gameUUID: any;
 
     this.gameOptionService.createGame(this.gameOptionsData).subscribe((data:any) => {
-      console.log(data);
+      //console.log(data);
       this.gameOptionResponseData.emit(data);
     });
 

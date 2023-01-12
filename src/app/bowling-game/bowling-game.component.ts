@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BowlingGameDataModel, BowlingGameOptionsDataModel } from '../types';
 
 @Component({
@@ -11,19 +12,22 @@ import { BowlingGameDataModel, BowlingGameOptionsDataModel } from '../types';
 
 export class BowlingGameComponent implements OnInit {
 
-  constructor() { 
+
+
+  constructor(private router: Router) { 
     
+
   }
   
   bowlingGameOptionsDataModel!: BowlingGameOptionsDataModel;
   bowlingGameDataModel!: BowlingGameDataModel;
 
   currentRoll: string = "";
-  rolls:string[] = [];
-  rollMap: Map<String, any> = new Map();
-  scores:Number[] = [];
+  //rolls:string[] = [];
+  //rollMap: Map<String, any> = new Map();
+  //scores:Number[] = [];
 
-  @Input() gameID:string = "1";
+  
   @Input() bowlingGameDataInput: any;
 
   onRoll(pin:string){
@@ -31,33 +35,37 @@ export class BowlingGameComponent implements OnInit {
   }
 
   updateRollMap(newRollMap:Map<Number,Number[]>){
-    this.rollMap = new Map(Object.entries(newRollMap));
+    //this.rollMap = new Map(Object.entries(newRollMap));
+    this.bowlingGameDataModel.rollMap = new Map(Object.entries(newRollMap));
   }
 
   gatherScore(newScores: Number[]){
-    this.scores = newScores;
+    //this.scores = newScores;
+    this.bowlingGameDataModel.scores = newScores;
   }
 
   resetGame(resetFlag: boolean){
-    this.rollMap = Object.assign(new Map(), {});
+    //this.rollMap = Object.assign(new Map(), {});
+    this.bowlingGameDataModel.rollMap = Object.assign(new Map(), {});
     if(resetFlag == true){
-      this.rolls = [];
-      this.scores = []
+      //this.rolls = [];
+      this.bowlingGameDataModel.rolls = [];
+      //this.scores = [];
+      this.bowlingGameDataModel.scores = [];
     }
   }
   
 
   ngOnInit(): void {
     this.bowlingGameOptionsDataModel = new BowlingGameOptionsDataModel(
-      this.bowlingGameDataInput.uuid,
-      this.bowlingGameDataInput.pins, 
-      this.bowlingGameDataInput.frames, 
-      this.bowlingGameDataInput.rollsPerFrame, 
-      this.bowlingGameDataInput.endFrames, 
-      this.bowlingGameDataInput.rollsPerEndFrame, 
-      this.bowlingGameDataInput.mode
+      history.state.data.uuid,
+      history.state.data.pins,
+      history.state.data.frames,
+      history.state.data.rollsPerFrame,
+      history.state.data.endFrames,
+      history.state.data.rollsPerEndFrame,
+      history.state.data.mode
     );
-    console.log("init" + this.bowlingGameDataInput.uuid);
     this.bowlingGameDataModel = new BowlingGameDataModel();
   }
 
